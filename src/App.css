@@ -1,0 +1,109 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+
+nav .row {
+  width: 80vw;
+}
+
+main{
+  width: 75vw;
+}
+
+section{
+  width: 80vw;
+}
+
+article{
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+form{
+  width: 30vw;
+  border-radius: 10px;
+}
+
+.switch-btn, .save{
+  cursor: pointer;
+}
+
+.switch-btn:hover{
+  text-decoration: underline;
+}
+
+.card-img{
+  max-height: 230px;
+}
+
+.card-title{
+  font-size: 1.3rem;
+}
+
+.card-text{
+  font-size: 1rem;
+}
+
+.card-body div{
+  font-size: 0.8rem;
+}
+
+@media (max-width: 1500px){
+  main{
+    width: 80vw;
+  }
+
+  section{
+    width: 90vw;
+  }
+} 
+
+@media (max-width: 1300px){
+  main{
+    width: 90vw;
+  }
+
+  form{
+    width: 70%;
+  }
+
+} 
+
+@media (max-width: 900px){
+
+  article{
+    display: block;
+    height: 100%;
+    width: 100%;
+  }
+
+  form{
+    margin-left: 15vw;
+    margin-top: 10vw;
+    margin-bottom: 10vw;
+  }
+
+}
+
+@media (max-width: 700px){
+
+nav .row {
+  width: 90vw;
+}
+
+.card-title {
+  font-size: 1.2rem;
+}
+
+.card-text{
+font-size: 0.9rem;
+}
+
+.card-body div{
+font-size: 0.7rem;
+}
+}
