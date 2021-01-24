@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "b6b30277464b65917e29cc61cf6667ef",
+    "revision": "6083aa1fcda6fd228b9c5e6f73b1e3dd",
     "url": "/AioNews/index.html"
   },
   {
@@ -28,8 +28,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/AioNews/static/js/4.a672b628.chunk.js"
   },
   {
-    "revision": "23a7a3927f74a1d2f99f",
-    "url": "/AioNews/static/js/5.e7b89a8f.chunk.js"
+    "revision": "ebceb20d3d25c2fe1d23",
+    "url": "/AioNews/static/js/5.19590ce2.chunk.js"
   },
   {
     "revision": "0b1891ea271aac52ea74",
@@ -40,8 +40,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/AioNews/static/js/main.39ed5ca5.chunk.js"
   },
   {
-    "revision": "0cbdd8fe74a91ac0bc52",
-    "url": "/AioNews/static/js/runtime-main.9dc19ebb.js"
+    "revision": "f8cc2f4cf5f4d71fe930",
+    "url": "/AioNews/static/js/runtime-main.dd66863c.js"
   },
   {
     "revision": "6ccbbc9a593a3e08232655313ee616b8",
