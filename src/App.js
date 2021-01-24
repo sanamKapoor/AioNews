@@ -10,7 +10,7 @@ const Error = React.lazy(() => import('./components/Error'));
 
 function App() {
   return (
-    <Router>
+    <Router basename="/">
       <Suspense fallback={ 
         <div className="vw-100 vh-100 d-flex justify-content-center align-items-center">
         <div className="spinner-border text-primary" role="status">
