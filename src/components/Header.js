@@ -27,9 +27,9 @@ function Header() {
     return (
       <nav className="navbar bg-primary px-2 px-md-5">
     <div className="row mx-auto">
-    <Link to="/home" className="col-md-3 col-4 text-light navbar-brand font-weight-bold">
+    <span className="col-md-3 col-4 text-light navbar-brand font-weight-bold">
       AIONEWS
-    </Link>
+    </span>
     {
       !data.saved ?
       <input

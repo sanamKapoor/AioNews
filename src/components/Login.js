@@ -3,10 +3,10 @@ import { useForm } from 'react-hook-form';
 import { useHistory } from 'react-router-dom';
 import avatar from "./img/user-icon.png";
 
-function Login() {
+function Login(props) {
 
-    const [isLogin, setLogin] = useState(false);
     const { register, handleSubmit, errors, watch, reset } = useForm({ mode: 'onChange'});
+    const [isLogin, setLogin] = useState(false);
     const [err, setError] = useState(false);
     let userCreated  = true;
 
@@ -17,7 +17,8 @@ function Login() {
       if(isLogin){
         
         if(user.email === values.email && user.password === values.password){
-          history.push('/home', { user: user });
+          localStorage.setItem('user', JSON.stringify(user))
+          history.push('/home');
           reset();
           return;
         } 
@@ -70,7 +71,8 @@ function Login() {
         localStorage.setItem('users', JSON.stringify(Users));
         
         reset();
-        history.push('/home', { user: user });
+        localStorage.setItem('user', JSON.stringify(user))
+        history.push('/home');
         return;
       } else {
         setError('You need to register first');
@@ -96,7 +98,8 @@ function Login() {
       let users = JSON.parse(localStorage.getItem('users'));
       users.push(user);
       localStorage.setItem('users', JSON.stringify(users));
-      history.push('/home', { user: user });
+      localStorage.setItem('user', JSON.stringify(user))
+      history.push('/home');
   
       reset();
       return;

@@ -1,5 +1,5 @@
-import React, { useEffect } from 'react'
-import { useHistory, useLocation } from 'react-router-dom';
+import React from 'react';
+import { useHistory } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 
 import Header from './Header'
@@ -9,22 +9,10 @@ import Modal from './Modal';
 
 function Home() {
 
-  const { state } = useLocation(); 
-  let history = useHistory();
-
   const showSaved = useSelector(state => state.saved);
+  const history = useHistory();
 
-  useEffect(() => {
-    if(state){
-      let userData = {
-        email: state.user.email,
-        password: state.user.password
-      }
-      localStorage.setItem('user', JSON.stringify(userData))
-    }
-  }, [state])
-
-  if(state || JSON.parse(localStorage.getItem('user'))){
+  if(JSON.parse(localStorage.getItem('user'))){
     return (
         <>
           <Header />
