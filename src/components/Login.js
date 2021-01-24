@@ -22,7 +22,7 @@ function Login() {
           return;
         } 
         else {
-          setError('Please enter correct email and password.');
+          setError('Please enter correct email and password');
   
           setTimeout(() => {
             setError('')
@@ -33,7 +33,7 @@ function Login() {
         }
       } 
       else {
-        setError('User with this email already exist.');
+        setError('User with this email already exist');
   
         setTimeout(() => {
           setError('')
@@ -45,7 +45,7 @@ function Login() {
   
     const diffEmail = (user, values) => {
       if(isLogin){
-        setError('User with this email does not exist.');
+        setError('User with this email does not exist');
   
           setTimeout(() => {
             setError('')
@@ -73,7 +73,7 @@ function Login() {
         history.push(`/${process.env.REACT_APP_DOMAIN}/home`, { user: user });
         return;
       } else {
-        setError('You need to register first.');
+        setError('You need to register first');
   
         setTimeout(() => {
           setError('')
