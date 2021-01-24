@@ -9,9 +9,9 @@ function Error() {
 
   return (
     <div className="d-flex justify-content-center align-items-center" style={{height: '100vh', width: '100vw'}}>
-      <div style={{ borderRadius: '10px'}} className="bg-light p-3 border-danger text-primary text-center">
+      <div style={{ borderRadius: '8px'}} className="bg-light p-3 border shadow text-primary text-center mx-3">
         <h2 className="font-weight-bold">Page not Found (Error 404)</h2>
-        <Link className="btn btn-secondary mt-2" to="/" >Login</Link>
+        <Link className="btn btn-sm btn-secondary mt-1 mt-sm-2" to="/" >Login</Link>
       </div>
     </div>
   )

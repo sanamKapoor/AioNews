@@ -1,10 +1,11 @@
 import React, { useEffect } from 'react'
 import { useHistory, useLocation } from 'react-router-dom';
+import { useSelector } from 'react-redux';
+
 import Header from './Header'
 import SavedNews from './SavedNews';
 import NewsDashboard from './NewsDashboard';
 import Modal from './Modal';
-import { useSelector } from 'react-redux';
 
 function Home() {
 

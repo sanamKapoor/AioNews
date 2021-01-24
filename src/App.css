@@ -3,16 +3,20 @@
   margin: 0;
 }
 
+body{
+  overflow-x: hidden;
+}
+
 nav .row {
   width: 80vw;
 }
 
 main{
-  width: 75vw;
+  width: 80vw;
 }
 
 section{
-  width: 80vw;
+  width: 85vw;
 }
 
 article{
@@ -24,69 +28,115 @@ article{
 }
 
 form{
-  width: 30vw;
-  border-radius: 10px;
+  width: 35vw;
+  border-radius: 8px;
 }
 
-.switch-btn, .save{
-  cursor: pointer;
+.user-img{
+  width: 140px;
+  height: 140px;
 }
 
-.switch-btn:hover{
-  text-decoration: underline;
+.form-text{
+  font-size: 1rem;
+}
+
+h2{
+  font-size: 1.5rem;
 }
 
 .card-img{
-  max-height: 230px;
+  max-height: 250px;
 }
 
 .card-title{
-  font-size: 1.3rem;
+  font-size: 1.2rem;
 }
 
 .card-text{
-  font-size: 1rem;
+  font-size: 0.9rem;
 }
 
 .card-body div{
   font-size: 0.8rem;
 }
 
-@media (max-width: 1500px){
-  main{
-    width: 80vw;
-  }
+.modal-title{
+  font-size: 1.2rem;
+}
 
-  section{
-    width: 90vw;
-  }
-} 
+.modal-body button{
+  font-size: 1rem;
+}
+
+i{
+  font-size: 1.4rem;
+}
+
+.big-icon{
+  font-size: 4rem;
+}
+
+.back-btn, .switch-btn{
+  cursor: pointer;
+}
+
+
+.water-mark{
+  background-color: white;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  font-size: 0.9rem;
+}
 
 @media (max-width: 1300px){
   main{
     width: 90vw;
   }
 
-  form{
-    width: 70%;
+  section{
+    width: 90vw;
   }
 
+  form{
+    width: 40vw;
+  }
 } 
+
 
 @media (max-width: 900px){
 
   article{
-    display: block;
     height: 100%;
-    width: 100%;
   }
 
   form{
-    margin-left: 15vw;
-    margin-top: 10vw;
-    margin-bottom: 10vw;
+    width: 50vw;
+    margin: 15vh auto;
   }
 
+  .user-img{
+    width: 120px;
+    height: 120px;
+  }
+
+  h2{
+    font-size: 1.3rem;
+  }
+
+  .card-title {
+    font-size: 1.1rem;
+  }
+
+  .card-body div{
+    font-size: 0.7rem;
+  }
+
+  .big-icon{
+    font-size: 3.5rem;
+  }
 }
 
 @media (max-width: 700px){
@@ -95,15 +145,79 @@ nav .row {
   width: 90vw;
 }
 
-.card-title {
-  font-size: 1.2rem;
-}
-
 .card-text{
-font-size: 0.9rem;
+  font-size: 0.8rem;
 }
 
-.card-body div{
-font-size: 0.7rem;
+.water-mark{
+  font-size: 0.8rem;
 }
+
+form{
+  width: 70vw;
+}
+
+.user-img{
+  width: 100px;
+  height: 100px;
+}
+
+}
+
+@media (max-width: 550px){
+  .card-title {
+    font-size: 1rem;
+  }
+
+  h2{
+    font-size: 1.2rem;
+  }
+
+  form{
+    width: 80vw;
+  }
+
+  .form-text{
+    font-size: 0.8rem;
+  }
+
+  .modal-title{
+    font-size: 1rem;
+  }
+  
+  .modal-body button{
+    font-size: 0.8rem;
+  }
+
+  i{
+    font-size: 1.2rem;
+  }
+
+  .big-icon{
+    font-size: 3rem;
+  }
+
+}
+
+@media (max-width: 400px){
+  .modal-body button{
+    font-size: 0.7rem;
+  }
+
+  form{
+    width: 90vw;
+  }
+
+  .user-img{
+    width: 80px;
+    height: 80px;
+  }
+
+  .big-icon{
+    font-size: 2.7rem;
+  }
+
+  .water-mark{
+    font-size: 0.7rem;
+  }
 }

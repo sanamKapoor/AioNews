@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useForm } from 'react-hook-form';
 import { useHistory } from 'react-router-dom';
+import avatar from "./img/user-icon.png";
 
 function Login() {
 
@@ -139,16 +140,16 @@ function Login() {
   
     return (
         <article>
-        <form onSubmit={handleSubmit(Submit)} className="form p-3 p-md-4 border border-primary text-primary">
+        <form onSubmit={handleSubmit(Submit)} className="form p-4 p-lg-5 text-primary shadow">
             <div className="text-center">
-            <i className="far fa-user fa-5x text-primary my-4"></i>
+            <img src={avatar} className="user-img" alt=""/>
             </div>
           <input 
               type="email" 
               name="email"
               ref={
                 register({
-                  required: 'Email is required.',
+                  required: 'Email is required',
                   pattern: {
                     value: /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/,
                     message: 'Invalid email address'
@@ -156,9 +157,9 @@ function Login() {
                 })
               }
               placeholder="Enter Email" 
-              className="my-3 form-control" />
+              className="form-text mt-4 form-control shadow-sm border-0 rounded-pill px-3" />
               {
-                errors.email && <span className="text-danger">{errors.email.message}</span>
+                errors.email && <small className="text-danger mx-3">{errors.email.message}</small>
               }
 
             <input 
@@ -166,17 +167,17 @@ function Login() {
               name="password" 
               ref={
                 register({
-                  required: 'Password is required.',
+                  required: 'Password is required',
                   minLength: {
                     value: 6,
-                    message: 'Password should be 6 characters long.'
+                    message: 'Password should be 6 characters long'
                   }
                 })
               }
               placeholder="Enter Password" 
-              className="my-3 form-control" />
+              className="form-text mt-3 form-control shadow-sm border-0 rounded-pill px-3" />
               {
-                errors.password && <span className="text-danger">{errors.password.message}</span>
+                errors.password && <small className="text-danger mx-3">{errors.password.message}</small>
               }          
               
               {
@@ -187,23 +188,25 @@ function Login() {
                 ref={
                   register({
                     required: 'Confirm your password',
-                    validate: (value) => value === watch('password') || "Password don't match."
+                    validate: (value) => value === watch('password') || "Password don't match"
                   })
                 }
                 placeholder="Confirm Password" 
-                className="my-3 form-control" />              
+                className="form-text mt-3 form-control shadow-sm border-0 rounded-pill px-3" />              
                 : ''
              }
             { 
-            (!isLogin && errors.confirmPassword) && <span className="text-danger">{errors.confirmPassword.message}</span>
+            (!isLogin && errors.confirmPassword) && <small className="text-danger mx-3">{errors.confirmPassword.message}</small>
             }
 
-            { err && <span className="text-danger">{err}</span>}
-          <button type="submit" className="my-3 btn btn-outline-primary btn-block">
-          { isLogin ? 'Login' : 'Sign Up'}
-          </button>
+          <div className="my-3 text-center">
+            { err && <small className="text-danger mb-1">{err}</small>}
+            <button type="submit" className="form-text btn btn-primary btn-block shadow rounded-pill">
+            { isLogin ? 'Login' : 'Sign Up'}
+            </button>
+          </div>
           <div className="text-center">
-            <span onClick={() => setLogin(!isLogin)} className="text-dark switch-btn">
+            <span onClick={() => setLogin(!isLogin)} className="form-text text-dark switch-btn">
             { !isLogin ? 'Login' : 'Register'}
             </span>
           </div>

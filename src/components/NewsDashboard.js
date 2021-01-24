@@ -1,31 +1,25 @@
-import React, { useEffect, useState } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchNews, topNews } from '../redux/news/action';
+import { fetchNews } from '../redux/news/action';
 import NewsCard from './NewsCard'
-import LanguageAndCountires from './LanguageAndCountires'
 
 function NewsDashboard() {
 
-    const data = useSelector(state => state);
     const dispatch = useDispatch();
+    const data = useSelector(state => state);
     const [heading, setHeading] = useState('');
 
-    useEffect(() => {
-        dispatch(fetchNews('top-news', data.language, data.country, false))
-    }, [])
+    const fetchTopNews = useCallback((url, op) => {
+        dispatch(fetchNews(url, op))
+    }, [dispatch])
 
     useEffect(() => {
-        const url = data.endPoint.url === undefined ? 'top-news' : data.endPoint.url;
-        const op = data.endPoint.operator === '&' ? true : false; 
-        dispatch(topNews())
-        dispatch(fetchNews(url, data.language, data.country, op))
-    }, [data.language, data.country])
+        if(data.endPoint.url === undefined){
+            fetchTopNews('top-news', false)
+        }
+    }, [fetchTopNews, data.endPoint])
 
-    useEffect(() => {
-        setTitle();  
-    }, [data])
-    
-    const setTitle = () => {
+    const setTitle = useCallback(() => {
         let text;
         let d = data.endPoint.url;
         let search = /^search/.test(d)  
@@ -36,12 +30,17 @@ function NewsDashboard() {
         if (data.searchResult || search) text = 'Search Results';
         if (data.topNews && top) text = data.topNews;
         setHeading(text);
-    }
+    }, [data])
+
+    useEffect(() => {
+        setTitle();  
+    }, [data, setTitle])
 
     return (
-    <main className="mx-auto my-2 my-md-3">
+    <>
+    <main className="mx-auto mt-2 mb-4 mb-sm-5">
         <div className="row">
-        <div className="col-12 col-lg-8">
+        <div className="col-12 col-lg-9 mx-auto">
             {
                 data.loading ?
                 <div className="text-center">
@@ -55,7 +54,7 @@ function NewsDashboard() {
                 :
                 data.news ?
                 <>
-                { heading ? <h3 className="text-capitalize m-3">{heading}</h3> : '' }
+                { heading ? <h2 className="text-capitalize m-sm-3 text-center text-sm-left">{heading}</h2> : '' }
                 {
                     data.news.map((n, index) => {
                         return <NewsCard key={index} values={n} />
@@ -66,9 +65,11 @@ function NewsDashboard() {
                 <h2 className="text-center">Server not responding.</h2>
             }
         </div>
-            <LanguageAndCountires />
         </div>
     </main>
+    <div className="water-mark text-center text-sm-right p-1 p-sm-2 shadow">Made with <span role="img" aria-label="img">❤️</span> by Sanam Kapoor
+    </div>
+    </>
     )
 }
 

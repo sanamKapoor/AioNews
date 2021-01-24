@@ -5,8 +5,6 @@ export const initialState = {
     news: [],
     error: '',
     saved: false,
-    language: '',
-    country: '',
     endPoint: {},
     setModalData: '',
     topic: '',
@@ -39,16 +37,6 @@ export default (state = initialState, action) => {
             return {
                 ...state,
                 saved: action.payload
-            }
-        case Actions.LANGUAGE: 
-            return {
-                ...state,
-                language: action.payload
-            }
-        case Actions.COUNTRY:
-            return {
-                ...state,
-                country: action.payload
             }
         case Actions.END_POINT:
             return {

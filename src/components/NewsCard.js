@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import img from './img/earth.png';
-function NewsCard({ values, saved }) {
+
+function NewsCard({ values, saved, deleteNews }) {
 
   const [isSave, saveOnce] = useState(false);
   const [error, setError] = useState('');
@@ -21,6 +22,7 @@ function NewsCard({ values, saved }) {
           if(news.title === values.title){
             saveOnce(true);
           }
+          return null;
         })
       }
     }
@@ -36,6 +38,7 @@ function NewsCard({ values, saved }) {
         if(user.email === currentUser.email && user.password === currentUser.password){
           realUser = user
         }
+        return null;
       })
     }
 
@@ -74,10 +77,12 @@ function NewsCard({ values, saved }) {
   
       if(storedNews){
         storedNews.map(n => {
-          if(n.title === values.title){
+          if(n.title === news.title){
+            deleteNews(news.title)
             let index = storedNews.indexOf(n)
             storedNews.splice(index, 1);
           }
+          return null;
         })
       } else {
         alert('Can not remove saved News.')
@@ -95,28 +100,28 @@ function NewsCard({ values, saved }) {
   if(values && !error){
     const image = (values.image === null || values.image === '' || values.image === undefined) ? img : values.image;
     return (
-        <div className="row no-gutters border m-2 p-2">
+        <div className="row no-gutters border mx-0 my-2 mx-sm-2 p-1 p-md-2 rounded">
         <div className="col-12 col-sm-4 align-self-center">
           <img src={image} className="card-img" alt="img" />
         </div>
         <div className="col-12 col-sm-8">
-          <div className="card-body align-self-center">
+          <div className="card-body p-2 p-sm-4 align-self-center">
           <h5 className="card-title">{values.title}</h5>
           <p className="card-text">{values.description}</p>
             <div className="row text-muted">
-              <em className="col">
+              <em className="col-12 col-sm-6">
               Published At : {new Date(values.publishedAt).toLocaleDateString()}
               </em>
-              <em className="col text-capitalize">
+              <em className="col-12 col-sm-6 text-capitalize">
                 Source : {values.source.name}
               </em>
             </div>
-            <div className="row text-muted my-3">
-              <div className="col">
-                <a href={values.url} target="_blank" className="btn btn-primary btn-block" rel="noopener noreferrer">View</a>
+            <div className="row text-muted my-2 my-sm-3">
+              <div className="col-12 col-sm-6">
+                <a href={values.url} target="_blank" className="btn btn-primary btn-block btn-sm my-1 my-sm-0" rel="noopener noreferrer">View</a>
               </div>
-              <div className="col">
-                <button onClick={() => handleSave(values)} className="btn btn-secondary btn-block">
+              <div className="col-12 col-sm-6">
+                <button onClick={() => handleSave(values)} className="btn btn-secondary btn-block btn-sm my-1 my-sm-0">
                   { saved ? 'Remove' : isSave ? 'Saved' : 'Save'}
                 </button>
               </div>

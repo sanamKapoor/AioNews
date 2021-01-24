@@ -27,20 +27,6 @@ export const showSavedNews = (isShow) => {
     }
 }
 
-export const language = (data) => {
-    return {
-        type: Action.LANGUAGE,
-        payload: data
-    }
-}
-
-export const country = (data) => {
-    return {
-        type: Action.COUNTRY,
-        payload: data
-    }
-}
-
 export const endPoint = data => {
     return {
         type: Action.END_POINT,
@@ -74,17 +60,17 @@ export const searchTopics = () => {
     }
 }
 
-export const fetchNews = (data, language, country, operator) => dispatch => {
+export const fetchNews = (data, operator) => dispatch => {
     dispatch(loading);
 
     const base_url = "https://gnews.io/api/v3";
-    const lang = language ? `&lang=${language}` : '';
-    const count = country ? `&country=${country}` : '';
     const op = operator ? '&' : '?';
 
-    const url = `${base_url}/${data}${lang}${count}${op}token=${process.env.REACT_APP_GOOGLE_NEWS_API_KEY}`;
+    const url = `${base_url}/${data}${op}token=${process.env.REACT_APP_GOOGLE_NEWS_API_KEY}`;
     dispatch(endPoint({ url: data, operator: op }));
     
+    console.log(url)
+
     fetch(url)
     .then((response) => {
         return response.json();
