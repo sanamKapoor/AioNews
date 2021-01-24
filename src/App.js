@@ -13,7 +13,7 @@ function App() {
     <Router>
       <Suspense fallback={ 
         <div className="vw-100 vh-100 d-flex justify-content-center align-items-center">
-        <div className="spinner-border text-light" role="status">
+        <div className="spinner-border text-primary" role="status">
             <span className="sr-only">Loading...</span>
         </div>
         </div>

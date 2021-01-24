@@ -17,7 +17,7 @@ function Login() {
       if(isLogin){
         
         if(user.email === values.email && user.password === values.password){
-          history.push('/home', { user: user });
+          history.push('/#/home', { user: user });
           reset();
           return;
         } 
@@ -70,7 +70,7 @@ function Login() {
         localStorage.setItem('users', JSON.stringify(Users));
         
         reset();
-        history.push('/home', { user: user });
+        history.push('/#/home', { user: user });
         return;
       } else {
         setError('You need to register first');
@@ -96,7 +96,7 @@ function Login() {
       let users = JSON.parse(localStorage.getItem('users'));
       users.push(user);
       localStorage.setItem('users', JSON.stringify(users));
-      history.push('/home', { user: user });
+      history.push('/#/home', { user: user });
   
       reset();
       return;
