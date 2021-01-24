@@ -2,7 +2,7 @@ import React, { Suspense } from 'react';
 import './App.css';
 import { Provider } from 'react-redux';
 import store from './redux/store';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { HashRouter as Router, Route, Switch } from 'react-router-dom';
 
 const Login = React.lazy(() => import('./components/Login'));
 const Home = React.lazy(() => import('./components/Home'));
@@ -20,8 +20,8 @@ function App() {
       }>
         <Provider store={store}>
           <Switch>
-            <Route exact path={`/${process.env.REACT_APP_DOMAIN}/`} component={Login} />
-            <Route exact path={`/${process.env.REACT_APP_DOMAIN}/home/`} component={Home} /> 
+            <Route exact path="/" component={Login} />
+            <Route exact path="/home" component={Home} /> 
             <Route path="*" component={Error} />
           </Switch>
         </Provider>

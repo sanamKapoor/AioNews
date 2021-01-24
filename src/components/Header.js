@@ -27,7 +27,7 @@ function Header() {
     return (
       <nav className="navbar bg-primary px-2 px-md-5">
     <div className="row mx-auto">
-    <Link to={`/${process.env.REACT_APP_DOMAIN}/home`} className="col-md-3 col-4 text-light navbar-brand font-weight-bold">
+    <Link to="/home" className="col-md-3 col-4 text-light navbar-brand font-weight-bold">
       AIONEWS
     </Link>
     {
@@ -49,7 +49,7 @@ function Header() {
       </button>
       <div className="dropdown-menu text-sm-center">
         <span className="dropdown-item save" onClick={() => dispatch(showSavedNews(true))}>Saved</span>
-        <Link to={`/${process.env.REACT_APP_DOMAIN}/`} onClick={() => {
+        <Link to="/" onClick={() => {
           localStorage.removeItem('user')
           dispatch(newsTopic(''))
           dispatch(endPoint({}))
