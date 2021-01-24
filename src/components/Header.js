@@ -49,7 +49,7 @@ function Header() {
       </button>
       <div className="dropdown-menu text-sm-center">
         <span className="dropdown-item save" onClick={() => dispatch(showSavedNews(true))}>Saved</span>
-        <Link to="/" onClick={() => {
+        <Link to={`/${process.env.REACT_APP_DOMAIN}/`} onClick={() => {
           localStorage.removeItem('user')
           dispatch(newsTopic(''))
           dispatch(endPoint({}))

@@ -20,8 +20,8 @@ function App() {
       }>
         <Provider store={store}>
           <Switch>
-            <Route exact path="/" component={Login} />
-            <Route exact path="/home" component={Home} /> 
+            <Route exact path={`/${process.env.REACT_APP_DOMAIN}/`} component={Login} />
+            <Route exact path={`/${process.env.REACT_APP_DOMAIN}/home/`} component={Home} /> 
             <Route path="*" component={Error} />
           </Switch>
         </Provider>
