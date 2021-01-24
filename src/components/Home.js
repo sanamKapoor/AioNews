@@ -38,7 +38,7 @@ function Home() {
         </>
     )
     } else {
-      history.push(`/${process.env.REACT_APP_DOMAIN}`);
+      history.push('/');
       return ''
     }
 }
