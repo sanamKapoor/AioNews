@@ -5,6 +5,5 @@ import reducer from './news/reducer';
 const midleware = [thunk];
 
 export default createStore(reducer, compose(
-    applyMiddleware(...midleware), 
-    window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+    applyMiddleware(...midleware)
   ))
