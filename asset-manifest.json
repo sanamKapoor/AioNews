@@ -1,33 +1,33 @@
 {
   "files": {
     "main.css": "/AioNews/static/css/main.6d70498d.chunk.css",
-    "main.js": "/AioNews/static/js/main.423b2f7d.chunk.js",
-    "main.js.map": "/AioNews/static/js/main.423b2f7d.chunk.js.map",
-    "runtime-main.js": "/AioNews/static/js/runtime-main.dd66863c.js",
-    "runtime-main.js.map": "/AioNews/static/js/runtime-main.dd66863c.js.map",
-    "static/js/2.0d8222fd.chunk.js": "/AioNews/static/js/2.0d8222fd.chunk.js",
-    "static/js/2.0d8222fd.chunk.js.map": "/AioNews/static/js/2.0d8222fd.chunk.js.map",
+    "main.js": "/AioNews/static/js/main.e69c7478.chunk.js",
+    "main.js.map": "/AioNews/static/js/main.e69c7478.chunk.js.map",
+    "runtime-main.js": "/AioNews/static/js/runtime-main.99a3f630.js",
+    "runtime-main.js.map": "/AioNews/static/js/runtime-main.99a3f630.js.map",
+    "static/js/2.6a160820.chunk.js": "/AioNews/static/js/2.6a160820.chunk.js",
+    "static/js/2.6a160820.chunk.js.map": "/AioNews/static/js/2.6a160820.chunk.js.map",
     "static/js/3.e5162d51.chunk.js": "/AioNews/static/js/3.e5162d51.chunk.js",
     "static/js/3.e5162d51.chunk.js.map": "/AioNews/static/js/3.e5162d51.chunk.js.map",
-    "static/js/4.a672b628.chunk.js": "/AioNews/static/js/4.a672b628.chunk.js",
-    "static/js/4.a672b628.chunk.js.map": "/AioNews/static/js/4.a672b628.chunk.js.map",
-    "static/js/5.19590ce2.chunk.js": "/AioNews/static/js/5.19590ce2.chunk.js",
-    "static/js/5.19590ce2.chunk.js.map": "/AioNews/static/js/5.19590ce2.chunk.js.map",
+    "static/js/4.bce52e92.chunk.js": "/AioNews/static/js/4.bce52e92.chunk.js",
+    "static/js/4.bce52e92.chunk.js.map": "/AioNews/static/js/4.bce52e92.chunk.js.map",
+    "static/js/5.c6b64d98.chunk.js": "/AioNews/static/js/5.c6b64d98.chunk.js",
+    "static/js/5.c6b64d98.chunk.js.map": "/AioNews/static/js/5.c6b64d98.chunk.js.map",
     "static/js/6.4d973fc4.chunk.js": "/AioNews/static/js/6.4d973fc4.chunk.js",
     "static/js/6.4d973fc4.chunk.js.map": "/AioNews/static/js/6.4d973fc4.chunk.js.map",
     "index.html": "/AioNews/index.html",
-    "precache-manifest.196a10dcf1aa26a53917a3e86ae544ea.js": "/AioNews/precache-manifest.196a10dcf1aa26a53917a3e86ae544ea.js",
+    "precache-manifest.7bbbf9e46b221b2d3fbaca5d425514c9.js": "/AioNews/precache-manifest.7bbbf9e46b221b2d3fbaca5d425514c9.js",
     "service-worker.js": "/AioNews/service-worker.js",
     "static/css/main.6d70498d.chunk.css.map": "/AioNews/static/css/main.6d70498d.chunk.css.map",
-    "static/js/2.0d8222fd.chunk.js.LICENSE.txt": "/AioNews/static/js/2.0d8222fd.chunk.js.LICENSE.txt",
+    "static/js/2.6a160820.chunk.js.LICENSE.txt": "/AioNews/static/js/2.6a160820.chunk.js.LICENSE.txt",
     "static/js/3.e5162d51.chunk.js.LICENSE.txt": "/AioNews/static/js/3.e5162d51.chunk.js.LICENSE.txt",
     "static/media/earth.png": "/AioNews/static/media/earth.6ccbbc9a.png",
     "static/media/user-icon.png": "/AioNews/static/media/user-icon.54e9ec53.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.dd66863c.js",
-    "static/js/2.0d8222fd.chunk.js",
+    "static/js/runtime-main.99a3f630.js",
+    "static/js/2.6a160820.chunk.js",
     "static/css/main.6d70498d.chunk.css",
-    "static/js/main.423b2f7d.chunk.js"
+    "static/js/main.e69c7478.chunk.js"
   ]
 }
