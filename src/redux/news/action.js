@@ -69,8 +69,6 @@ export const fetchNews = (data, operator) => dispatch => {
     const url = `${base_url}/${data}${op}token=${process.env.REACT_APP_GOOGLE_NEWS_API_KEY}`;
     dispatch(endPoint({ url: data, operator: op }));
     
-    console.log(url)
-
     fetch(url)
     .then((response) => {
         return response.json();
