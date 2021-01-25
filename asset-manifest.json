@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/AioNews/static/css/main.6d70498d.chunk.css",
-    "main.js": "/AioNews/static/js/main.e69c7478.chunk.js",
-    "main.js.map": "/AioNews/static/js/main.e69c7478.chunk.js.map",
+    "main.js": "/AioNews/static/js/main.cac75237.chunk.js",
+    "main.js.map": "/AioNews/static/js/main.cac75237.chunk.js.map",
     "runtime-main.js": "/AioNews/static/js/runtime-main.99a3f630.js",
     "runtime-main.js.map": "/AioNews/static/js/runtime-main.99a3f630.js.map",
     "static/js/2.6a160820.chunk.js": "/AioNews/static/js/2.6a160820.chunk.js",
@@ -16,7 +16,7 @@
     "static/js/6.4d973fc4.chunk.js": "/AioNews/static/js/6.4d973fc4.chunk.js",
     "static/js/6.4d973fc4.chunk.js.map": "/AioNews/static/js/6.4d973fc4.chunk.js.map",
     "index.html": "/AioNews/index.html",
-    "precache-manifest.7bbbf9e46b221b2d3fbaca5d425514c9.js": "/AioNews/precache-manifest.7bbbf9e46b221b2d3fbaca5d425514c9.js",
+    "precache-manifest.4198fb3da066bf278bb14e1dca3152e0.js": "/AioNews/precache-manifest.4198fb3da066bf278bb14e1dca3152e0.js",
     "service-worker.js": "/AioNews/service-worker.js",
     "static/css/main.6d70498d.chunk.css.map": "/AioNews/static/css/main.6d70498d.chunk.css.map",
     "static/js/2.6a160820.chunk.js.LICENSE.txt": "/AioNews/static/js/2.6a160820.chunk.js.LICENSE.txt",
@@ -28,6 +28,6 @@
     "static/js/runtime-main.99a3f630.js",
     "static/js/2.6a160820.chunk.js",
     "static/css/main.6d70498d.chunk.css",
-    "static/js/main.e69c7478.chunk.js"
+    "static/js/main.cac75237.chunk.js"
   ]
 }

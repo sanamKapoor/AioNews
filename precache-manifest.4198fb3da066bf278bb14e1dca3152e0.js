@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "74b5ae8ee2a1e28b9105af88795def33",
+    "revision": "8ab88d5d743ca48ff390ec3a55d689f5",
     "url": "/AioNews/index.html"
   },
   {
-    "revision": "a3108a823e36ef4d17c7",
+    "revision": "2913a4318aa3661f7a43",
     "url": "/AioNews/static/css/main.6d70498d.chunk.css"
   },
   {
@@ -36,8 +36,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/AioNews/static/js/6.4d973fc4.chunk.js"
   },
   {
-    "revision": "a3108a823e36ef4d17c7",
-    "url": "/AioNews/static/js/main.e69c7478.chunk.js"
+    "revision": "2913a4318aa3661f7a43",
+    "url": "/AioNews/static/js/main.cac75237.chunk.js"
   },
   {
     "revision": "eeb6dd48eb5f5123649e",
