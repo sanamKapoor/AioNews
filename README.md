@@ -1,1 +1,1 @@
-AioNews is a news application coded in reactjs. I used google news api for fetching the news all across the world. You can fetch news from a specific country and in a specific language. I used react hooks, redux, routers and useForm in this project. 
+AioNews is a news application where you can found top news, news on some specific topics and can also search news. Don't worry you can also save your favourite ones. I used google news api for fetching the news all across the world. I used react hooks, redux, routers and useForm in this project. 
