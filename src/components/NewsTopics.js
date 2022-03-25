@@ -18,7 +18,7 @@ function NewsTopics() {
                         dispatch(newsTopic(t))
                         dispatch(fetchNews(`topics/${t}`, false))
                     }} 
-                    className={`mx-1 p text-capitalize switch-btn card-text ${data.topic === t ? 'text-muted' : ''}`}>
+                    className={`mx-1 p text-capitalize switch-btn card-text ${data.topic === t ? 'text-dark' : ''}`}>
                     {t}
                     </div>
                     )

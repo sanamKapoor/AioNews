@@ -47,8 +47,8 @@ function Header() {
       <button className="btn btn-outline-light btn-sm dropdown-toggle px-2 py-1" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         <i className="far fa-user pr-1 pr-md-2"></i>
       </button>
-      <div className="dropdown-menu text-sm-center">
-        <span className="dropdown-item save" onClick={() => dispatch(showSavedNews(true))}>Saved</span>
+      <div className="dropdown-menu dropdown-menu-right text-center">
+        <span className="dropdown-item save pointer" onClick={() => dispatch(showSavedNews(true))}>Saved</span>
         <Link to="/" onClick={() => {
           localStorage.removeItem('user')
           dispatch(newsTopic(''))

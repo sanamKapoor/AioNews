@@ -7,6 +7,10 @@ body{
   overflow-x: hidden;
 }
 
+.pointer{
+  cursor: pointer;
+}
+
 nav .row {
   width: 80vw;
 }
