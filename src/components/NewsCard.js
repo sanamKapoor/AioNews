@@ -9,7 +9,7 @@ function NewsCard({ values, saved, deleteNews }) {
 
   useEffect(() => {
     setShowErr(false);
-    const users = JSON.parse(localStorage.getItem('users'));
+    const users = JSON.parse(localStorage.getItem('aio_users'));
     let realUser = getRealUser(users);
 
     if(!realUser && !showErr){
@@ -31,7 +31,7 @@ function NewsCard({ values, saved, deleteNews }) {
 
   const getRealUser = (allUsers) => {
     let realUser;
-    const currentUser = JSON.parse(localStorage.getItem('user'));
+    const currentUser = JSON.parse(localStorage.getItem('aio_user'));
 
     if(allUsers.length > 0 && currentUser){
       allUsers.map(user => {
@@ -52,7 +52,7 @@ function NewsCard({ values, saved, deleteNews }) {
   const saveNews = news => {
 
     if(!isSave){
-    const users = JSON.parse(localStorage.getItem('users'));
+    const users = JSON.parse(localStorage.getItem('aio_users'));
 
     let realUser = getRealUser(users);
     let storedNews = realUser.savedNews;
@@ -63,14 +63,14 @@ function NewsCard({ values, saved, deleteNews }) {
       alert('Can not save News.')
     }
 
-    localStorage.setItem('users', JSON.stringify(users));
+    localStorage.setItem('aio_users', JSON.stringify(users));
     
      saveOnce(true);
     }
   }
 
   const unsaveNews = news => {
-      const users = JSON.parse(localStorage.getItem('users'));
+      const users = JSON.parse(localStorage.getItem('aio_users'));
   
       let realUser = getRealUser(users);
       let storedNews = realUser.savedNews;
@@ -88,7 +88,7 @@ function NewsCard({ values, saved, deleteNews }) {
         alert('Can not remove saved News.')
       }
   
-      localStorage.setItem('users', JSON.stringify(users));
+      localStorage.setItem('aio_users', JSON.stringify(users));
       
        saveOnce(false);
   }

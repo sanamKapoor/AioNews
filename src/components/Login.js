@@ -17,7 +17,7 @@ function Login(props) {
       if(isLogin){
         
         if(user.email === values.email && user.password === values.password){
-          localStorage.setItem('user', JSON.stringify(user))
+          localStorage.setItem('aio_user', JSON.stringify(user))
           history.push('/home');
           reset();
           return;
@@ -68,10 +68,10 @@ function Login(props) {
   
         let Users = [];
         Users.push(user);
-        localStorage.setItem('users', JSON.stringify(Users));
+        localStorage.setItem('aio_users', JSON.stringify(Users));
         
         reset();
-        localStorage.setItem('user', JSON.stringify(user))
+        localStorage.setItem('aio_user', JSON.stringify(user))
         history.push('/home');
         return;
       } else {
@@ -95,10 +95,10 @@ function Login(props) {
         savedNews: []
       }
   
-      let users = JSON.parse(localStorage.getItem('users'));
+      let users = JSON.parse(localStorage.getItem('aio_users'));
       users.push(user);
-      localStorage.setItem('users', JSON.stringify(users));
-      localStorage.setItem('user', JSON.stringify(user))
+      localStorage.setItem('aio_users', JSON.stringify(users));
+      localStorage.setItem('aio_user', JSON.stringify(user))
       history.push('/home');
   
       reset();
@@ -108,7 +108,7 @@ function Login(props) {
    
     const Submit = values => {
   
-      let users = JSON.parse(localStorage.getItem('users'));
+      let users = JSON.parse(localStorage.getItem('aio_users'));
   
       if(users){
         for(let user of users){

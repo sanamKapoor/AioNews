@@ -50,7 +50,7 @@ function Header() {
       <div className="dropdown-menu dropdown-menu-right text-center">
         <span className="dropdown-item save pointer" onClick={() => dispatch(showSavedNews(true))}>Saved</span>
         <Link to="/" onClick={() => {
-          localStorage.removeItem('user')
+          localStorage.removeItem('aio_user')
           dispatch(newsTopic(''))
           dispatch(endPoint({}))
         }} className="btn btn-secondary btn-sm m-2">Logout</Link>

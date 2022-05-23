@@ -10,8 +10,8 @@ function SavedNews() {
     const [error, setError] = useState('');
 
     const fetchSavedNews = useCallback(() => {
-        const users = JSON.parse(localStorage.getItem('users'));
-        const currentUser = JSON.parse(localStorage.getItem('user'));
+        const users = JSON.parse(localStorage.getItem('aio_users'));
+        const currentUser = JSON.parse(localStorage.getItem('aio_user'));
         let realUser = getRealUser(users, currentUser);
 
         if(realUser){

@@ -12,12 +12,12 @@ function Home() {
   const showSaved = useSelector(state => state.saved);
   const history = useHistory();
 
-  if(JSON.parse(localStorage.getItem('user'))){
+  if(JSON.parse(localStorage.getItem('aio_user'))){
     return (
         <>
           <Header />
           {
-            (showSaved && JSON.parse(localStorage.getItem('user'))) ?
+            (showSaved && JSON.parse(localStorage.getItem('aio_user'))) ?
             <SavedNews />
             :
             <NewsDashboard />
